@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/base/RabbitMQClient.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">lib/base/</a> RabbitMQClient.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.26% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>68/111</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">41.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>20/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.24% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.81% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/83</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167</td><td class="line-coverage quiet"><span class="cline-any cline-yes">182×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="if path not taken" >I</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span></span>
+&nbsp;
+import CONFIG from './../config';
+import _ from 'underscore';
+import {getStompUrl,<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="if path not taken" >I</span><span class="branch-0 cbranch-no" title="branch not covered" ></span></span>
+        toNetworkMessage
+}
+from './FunctionUtils';
+&nbsp;
+const Stomp = require('stompjs');
+const SockJS = require('sockjs-client');
+let url = getStompUrl(CONFIG.quantEdgeConfig.urlStomp),
+    queuePrefix = '/amq/queue/',
+    queue = null,
+    subscription = null,
+    isConnected = false,
+    changedQueue = false,
+    isFirstConnect = true,
+    authenHeaders = null,
+    firstLoginMsg = null,
+    client = {},
+    that = null;
+&nbsp;
+export default class RabbitMQClient {
+&nbsp;
+    constructor() {
+<span class="missing-if-branch" title="if path not taken" >I</span>        if (_.isNull(CONFIG.quantEdgeConfig))
+<span class="cstat-no" title="statement not covered" >            throw 'No quantEdgeCo</span>nfig node';
+        that = this;
+    }
+&nbsp;
+    connect(message) {
+        firstLoginMsg = message;
+<span class="missing-if-branch" title="if path not taken" >I</span>        if (isConnected === true) {
+<span class="cstat-no" title="statement not covered" >            that.di</span>sconnect();
+        }
+<span class="missing-if-branch" title="else path not taken" >E</span>        if (isConnected === false) {
+            authenHeaders = {
+                login: firstLoginMsg.UserName,
+                passcode: firstLoginMsg.Password,
+                'host': CONFIG.quantEdgeConfig.vhost
+            };
+            queue = that.genarateQueue(CONFIG.quantEdgeConfig.exchange, firstLoginMsg.UserName);
+            //thiet lap lai connection moi
+            Stomp.WebSocketClass = SockJS;
+            client = Stomp.client(url);
+            client.heartbeat.outgoing = 0; //thiet lap nay ko tuong thich voi RabbitMQ
+            client.heartbeat.incoming = 0; //thiet lap nay ko tuong thich voi RabbitMQ
+            client.connect(authenHeaders, that.clientOnConnect, that.clientOnError);<span class="fstat-no" title="function not covered" ></span>
+        }
+    }
+&nbsp;
+    reconnect() {
+<span class="cstat-no" title="statement not covered" >        if (client != null)</span>
+<span class="cstat-no" title="statement not covered" >            client.di</span>sconnect();
+<span class="cstat-no" title="statement not covered" >        clien</span>t = null;
+        //thiet lap lai connection moi
+<span class="cstat-no" title="statement not covered" >        Stomp.WebSocketClass </span>= SockJS;
+<span class="cstat-no" title="statement not covered" >        client = Stomp.cli</span>ent(url);
+<span class="cstat-no" title="statement not covered" >        client.heartbeat.outg</span>oing = 0; //thiet lap nay ko tuong thich voi RabbitMQ
+<span class="cstat-no" title="statement not covered" >        client.heartbeat.inco</span>ming = 0; //thiet lap nay ko tuong thich voi RabbitMQ
+<span class="cstat-no" title="statement not covered" >        client.connect(authenHeaders, that.clientOnConnect, that.client</span>OnError);
+    }
+&nbsp;
+    isNotLogedOn() {
+        return isFirstConnect;
+    }
+&nbsp;
+    updateQueue(workQueue) {
+<span class="missing-if-branch" title="if path not taken" >I</span>        if (subscription != null) {
+<span class="cstat-no" title="statement not covered" >            subscription.uns</span>ubscribe();
+<span class="cstat-no" title="statement not covered" >            subscri</span>ption = null;
+        }
+<span class="missing-if-branch" title="if path not taken" >I</span>        if (isConnected === true) {
+<span class="cstat-no" title="statement not covered" >            subscription = client.subscribe(queuePrefix + workQueue, that.c</span>lientOnReceved);
+<span class="cstat-no" title="statement not covered" >            queue</span> = workQueue;
+<span class="cstat-no" title="statement not covered" >            changed</span>Queue = true;
+        }
+    }
+&nbsp;
+    disconnect() {
+<span class="missing-if-branch" title="if path not taken" >I</span>        if (clie<span class="cstat-no" title="statement not covered" >nt == nu</span>ll) return;
+<span class="missing-if-branch" title="if path not taken" >I</span>        if (isConnected === true) {
+<span class="cstat-no" title="statement not covered" >            if (subscription != null) {</span>
+<span class="cstat-no" title="statement not covered" >                subscription</span>.unsubscribe();
+<span class="cstat-no" title="statement not covered" >                sub</span>scription = null;
+            }
+<span class="cstat-no" title="statement not covered" >            client.di</span>sconnect();
+<span class="cstat-no" title="statement not covered" >            isConne</span>cted = false;
+<span class="cstat-no" title="statement not covered" >            isFirstCo</span>nnect = true;
+<span class="cstat-no" title="statement not covered" >            changedQ</span>ueue = false;
+        }
+    }
+&nbsp;
+    clientOnConnect() {
+        try {
+            isConnected = true;
+<span class="missing-if-branch" title="if path not taken" >I</span>            if (subscription != null) {
+<span class="cstat-no" title="statement not covered" >                subscription</span>.unsubscribe();
+<span class="cstat-no" title="statement not covered" >                sub</span>scription = null;
+            }
+            subscription = client.subscribe(queuePrefix + queue, that.clientOnReceved);
+<span class="cstat-no" title="statement not covered" >            if (isFirstConnect === true &amp;&amp; firstLoginMsg != null) {</span>
+<span class="cstat-no" title="statement not covered" >                firstLoginMsg.Rece</span>iveTopic = queue;
+<span class="cstat-no" title="statement not covered" >                firstLoginMsg.Tempor</span>aryTopic = queue;
+<span class="cstat-no" title="statement not covered" >                that.sendMessage(firstLoginMsg.SendingTopic, toNetworkMessage(firstLoginMsg), firstLoginMsg.Ttl);</span>
+<span class="cstat-no" title="statement not covered" >                firs</span>tLoginMsg = null;
+            }
+<span class="cstat-no" title="statement not covered" >            if (that.onConnected)</span>
+<span class="cstat-no" title="statement not covered" >                that</span>.onConnected();
+        } catch (e) {
+            console.error(e);
+        }
+    }
+&nbsp;
+    clientOnError(error) {
+        //khoi tao lai ket noi
+        isConnected = false;
+<span class="missing-if-branch" title="if path not taken" >I</span>        if (that.onConnectError)
+<span class="cstat-no" title="statement not covered" >            that.onConnectEr</span>ror(error);
+    }
+&nbsp;
+    clientOnReceved(message) {
+        isFirstConnect = false; //dam bao nhan duoc toi thieu 1 msg thi moi thoi
+<span class="missing-if-branch" title="if path not taken" >I</span>        if (that.onReceiveMessage)
+<span class="cstat-no" title="statement not covered" >            that.onReceiveMessage(mes</span>sage.body);
+    }
+&nbsp;
+    sendMessage(sendingTopic, message, ttl) {
+        try {
+<span class="missing-if-branch" title="else path not taken" >E</span>            if (!isConnected) return false;
+<span class="cstat-no" title="statement not covered" >            if (ttl) {</span>
+<span class="cstat-no" title="statement not covered" >                const t</span>tlValue = 1000 * ttl;
+<span class="cstat-no" title="statement not covered" >                client.send(sendingTopic, {</span>
+                    expiration: ttlValue,
+                    persistent: 0
+                }, message);
+            } else
+<span class="cstat-no" title="statement not covered" >                client.send(sendingTopic</span>, null, message);
+<span class="cstat-no" title="statement not covered" >            r</span>eturn true;
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >            consol</span>e.error(e);
+        }
+<span class="cstat-no" title="statement not covered" >        return</span> false;
+    }
+&nbsp;
+    genarateQueue(exc, user) {
+        const queueVal = exc + '.temporary.' + user;
+        return queueVal;
+    }
+&nbsp;
+    getConnected() {
+        return isConnected;
+    }
+&nbsp;
+    getChangedQueue() {
+        return changedQueue;
+    }
+&nbsp;
+    getExchange() {
+        return CONFIG.quantEdgeConfig.exchange;
+    }
+&nbsp;
+    getReceiveTopic() {
+        return queue;
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 28 2016 13:19:47 GMT+0700 (ICT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

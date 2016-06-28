@@ -1,0 +1,17 @@
+module.exports = {
+    Database: 'Database',
+    Session: 'Session',
+    DataProvider: 'DataProvider',
+    Sinker: 'Sinker',
+    Authentication: 'Authentication',
+    User: 'User',
+    Report: 'Report',
+    System: 'System',
+    Risk: 'Risk',
+    Dealing: 'Dealing',
+    Trading: 'Trading',
+    Pricing: 'Pricing',
+    Alert: 'Alert',
+    Margin: 'Margin',
+    PreTrade: 'PreTrade',
+};

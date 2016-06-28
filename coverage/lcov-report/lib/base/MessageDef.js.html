@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/base/MessageDef.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">lib/base/</a> MessageDef.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.16% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>171/176</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.65% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>22/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>29/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</td><td class="line-coverage quiet"><span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const MessageType = require('./../enum/MessageType');
+const RequestType = require('./../enum/RequestType');
+&nbsp;
+//dinh nghia message
+export function RealtimeEntity(entity, action, actor, time) {
+    this.BaseEntity = entity;
+    this.EntityAction = action;
+    this.Actor = actor;
+    this.LastUpdate = time;
+}
+&nbsp;
+export function NetworkStatusBroadcast(isConnected) {
+    this.IsConnected = isConnected;
+    this.Reason = '';
+    this.RetryCount = 0;
+}
+&nbsp;
+export function CompressedMessage() {
+    this.$type = 'QuantEdge.Message.Common.CompressedMessage, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MainMsgType = '';
+    this.MainRequestKey = '';
+    this.RawMessage = '';
+}
+&nbsp;
+export function PartialMessage() {
+    this.$type = 'QuantEdge.Message.Common.PartialMessage, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.Count = 0;
+    this.Index = 0;
+    this.MainMsgType = '';
+    this.MainRequestKey = '';
+    this.RawMessage = '';
+}
+&nbsp;
+export function PingRequest() {
+    this.$type = 'QuantEdge.Message.Request.Authentication.PingRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Authentication;
+    this.Ttl = 60;
+    this.IsNotPersist = true;
+    this.IsRunOnHoliday = true;
+    this.UserId = 0;
+    this.SessionKey = 0;
+}
+&nbsp;
+export function SubscribeEntityRequest(issubscribe, keysubscribe, listentityname) {
+    this.$type = 'QuantEdge.Message.Request.Authentication.SubscribeEntityRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Authentication;
+    this.IsSubscribe = issubscribe; //subscribe or un subscribe
+    this.KeySubscribe = keysubscribe; //Ten form hoac ma form (Co the trung voi truong RequestKey)
+    this.ListEntityName = listentityname; //list entity name
+}
+&nbsp;
+export function FirstLoginRequest() {
+    this.$type = 'QuantEdge.Message.Request.Authentication.FirstLoginRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Authentication;
+    this.Ttl = 60;
+    this.IsNotPersist = true;
+    this.IsRunOnHoliday = true;
+    this.UserName = '';
+    this.Password = '';
+    this.ReceiveTopic = '';
+}
+&nbsp;
+export function SecondLoginRequest() {
+    this.$type = 'QuantEdge.Message.Request.Authentication.SecondLoginRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Authentication;
+    this.Ttl = 60;
+    this.IsNotPersist = true;
+    this.IsRunOnHoliday = true;
+    this.UserName = '';
+    this.Password = '';
+    this.OtpPass = '';
+    this.ReceiveTopic = '';
+}
+&nbsp;
+export function UserLogoutRequest() {
+    this.$type = 'QuantEdge.Message.Request.Authentication.UserLogoutRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Authentication;
+    this.Ttl = 60;
+    this.IsNotPersist = true;
+    this.IsRunOnHoliday = true;
+    this.UserLayout = null;
+}
+&nbsp;
+export function GetUserLayoutRequest() {
+    this.$type = 'QuantEdge.Message.Request.DataProvider.GetUserLayoutRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.DataProvider;
+    this.Ttl = 60;
+    this.IsNotPersist = true;
+    this.IsRunOnHoliday = true;
+    this.IsCustomer = true;
+    this.UserId = 0;
+}
+&nbsp;
+export function ResendOtpPassRequest() {
+    this.$type = 'QuantEdge.Message.Request.User.ResendOtpPassRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.User;
+    this.IsRunOnHoliday = true;
+    this.UserName = '';
+    this.Password = '';
+    this.ReceiveTopic = '';
+}
+&nbsp;
+export function CreateTerminalEnvironmentRequest() {
+    this.$type = 'QuantEdge.Message.Request.Authentication.CreateTerminalEnvironmentRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Authentication;
+    this.IsRunOnHoliday = true;
+    this.IsNotPersist = true;
+}
+&nbsp;
+export function GetListTradingDealRequest(fromTime, toTime, requestType, clientOrderId, listOrderTypeEnum, isRequestAll, listCurrentState,memberId) {
+    this.$type = 'QuantEdge.Message.Request.DataProvider.GetListTradingDealRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.DataProvider;
+    this.FromTime = fromTime;
+    this.ToTime = toTime;
+    this.ClientOrderId = clientOrderId;
+    this.RequestType = requestType;
+    this.ListOrderTypeEnum = listOrderTypeEnum;
+    this.ListCurrentState = listCurrentState;
+    this.IsRequestAll = isRequestAll;
+    this.MemberId=memberId;
+}
+&nbsp;
+&nbsp;
+export function GetListBussinessInfo() {
+    this.$type = 'QuantEdge.Message.Request.Margin.GetListBussinessInfoRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Margin;
+    this.IsOpenForm = true;
+    // this.PartnerId = PartnerId;
+}
+&nbsp;
+export function PriceSubscribeRequest(lst, issubscribe) {
+    this.$type = 'QuantEdge.Message.Request.Pricing.PriceSubscribeRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Pricing;
+    this.IsRunOnHoliday = true;
+    this.IsNotPersist = true;
+    this.ListSymbolId = lst;
+    this.IsSubscribe = issubscribe;
+}
+export function GetListSymbolRequest() {
+    this.$type = 'QuantEdge.Message.Request.Dealing.GetListSymbolRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Dealing;
+    this.Target = RequestType.GetListActive;
+    this.IsCustomer = true;
+}
+export function UpdateUserInfoRequest(userInfo, requestType) {
+    this.$type = 'QuantEdge.Message.Request.User.UpdateUserInfoRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.User;
+    this.IsRunOnHoliday = true;
+    this.IsNotPersist = true;
+    this.UserInfo = userInfo;
+    this.RequestType = requestType;
+}
+export function GetListMemberSymbolMappingRequest( requestType) {
+    this.$type = 'QuantEdge.Message.Request.DataProvider.GetListMemberSymbolMappingRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Dealing;
+    this.RequestType = requestType;
+}
+export function UpdateUserLayoutRequest(userlayout) {
+    this.$type = 'QuantEdge.Message.Request.Authentication.UpdateUserLayoutRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Authentication;
+    this.IsRunOnHoliday = true;
+    this.IsNotPersist = true;
+    this.UserLayout = userlayout;
+}
+&nbsp;
+export function NewOrderSingleRequest(newOrderSingleObject) {
+    this.$type = 'QuantEdge.Message.Request.PreTrade.NewOrderSingleRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.PreTrade;
+    this.IsRunOnHoliday = true;
+    this.IsNotPersist = true;
+    this.NewOrderSingleObject = newOrderSingleObject;
+}
+export function GetListAccountRequest(memberId,requestType) {
+    this.$type = 'QuantEdge.Message.Request.Risk.GetListAccountRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.Risk;
+    this.IsRunOnHoliday = true;
+    this.IsNotPersist = true;
+    this.MemberId = memberId;
+    this.Target = requestType;
+}
+export function CancelOrderRequest(tradingDeal) {
+    this.$type = 'QuantEdge.Message.Request.PreTrade.CancelOrderRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.PreTrade;
+    this.IsRunOnHoliday = true;
+    this.IsNotPersist = true;
+    this.TradingDeal = tradingDeal;
+}
+export function UpdateOrderRequest(tradingDeal) {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span>
+    this.$type = 'QuantEdge.Message.Request.PreTrade.UpdateOrderRequest, Message, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null';
+    this.MessageType = MessageType.PreTrade;
+    this.IsRunOnHoliday = true;
+    this.IsNotPersist = true;
+    this.TradingDeal = tradingDeal;
+}
+//dinh nghia message khac
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 28 2016 13:19:47 GMT+0700 (ICT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

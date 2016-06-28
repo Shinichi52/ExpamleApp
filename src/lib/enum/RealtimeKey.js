@@ -1,0 +1,20 @@
+module.exports = {
+    UserLogin: 'UserLogin',
+    HydroConfig: 'HydroConfig',
+    BasinInfo: 'BasinInfo',
+    TieuChiDanhGia: 'TieuChiDanhGia',
+    LakeInfo: 'LakeInfo',
+    LakeLimit: 'LakeLimit',
+    LakeParam: 'LakeParam',
+    LakeInfoDaily: 'LakeInfoDaily',
+    UserLakeAssigned: 'UserLakeAssigned',
+    LakeRequire: 'LakeRequire',
+    LakeAverageDaily: 'LakeAverageDaily',
+    ActionLog: 'ActionLog',
+    HydroInfo: 'HydroInfo',
+    HydroLevel: 'HydroLevel',
+    TradingDeal: 'TradingDeal',
+    LakeDailyReq: 'LakeDailyReq',
+    OrderTransaction:'OrderTransaction',
+    OpenPositionInfo : 'OpenPositionInfo'
+};

@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for reducers/orderList/orderListReducer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">reducers/orderList/</a> orderListReducer.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">82.86% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>58/70</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.38% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>29/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/53</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+'use strict';
+&nbsp;
+const InitialState = require('./orderListInitialState').default;
+&nbsp;
+&nbsp;
+const {
+    SET_STATE,
+    LOADING_ORDER_LIST,
+    REALTIME_ORDER_LIST,
+    PENDING_REALTIME_ORDER_LIST,
+    RESPONSE_CANCEL_ORDER_LIST,
+    RESPONSE_ORDER_LIST,
+    REJECT_ORDER_LIST,
+} = require('../../lib/constants').default;
+const ResourcesKeyEnum = require('../../lib/enum/ResourcesKeyEnum');
+let formType={
+  'Fill':'Fill',
+  'Cancel':'Cancel',
+  'Working':'Working'
+};
+import {
+  firstOrDefault
+}
+from './../../lib/base/FunctionUtils';
+const initialState = new InitialState;
+&nbsp;
+export default function orderListReducer(state = initialState, action) {<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+<span class="missing-if-branch" title="if path not taken" >I</span>    if (!(state instanceof InitialSt<span class="cstat-no" title="statement not covered" >ate)) return initialState.mergeDeep(st</span>ate);
+&nbsp;
+    if (action.type!==LOADING_ORDER_LIST
+    &amp;&amp;action.type!==REALTIME_ORDER_LIST
+    &amp;&amp;action.type!==PENDING_REALTIME_ORDER_LIST
+    &amp;&amp;action.type!==RESPONSE_CANCEL_ORDER_LIST
+    &amp;&amp;action.type!==RESPONSE_ORDER_LIST) {
+      state = state.setIn(['form', 'state'], REJECT_ORDER_LIST);
+    }
+&nbsp;
+    switch (action.type) {
+        case LOADING_ORDER_LIST:
+            let nextState = state.setIn(['form', 'fields', 'ErrorCode'], '')
+            .setIn(['form', 'state'], action.type)
+            .setIn(['form', 'isError'], false)
+                                .setIn(['form', 'isBusy'], true);
+            return nextState;
+        case RESPONSE_ORDER_LIST:
+        let nextState1 = state.setIn(['form', 'isBusy'], false)
+        .setIn(['form', 'state'], action.type)
+        .setIn(['form', 'isError'], false)
+                              .setIn(['form', 'fields', 'listData'], action.payload.ListReturn)
+                              .setIn(['form', 'fields', 'listDataFill'], action.payload.ListReturnFill)
+                              .setIn(['form', 'fields', 'ErrorCode'], '')
+                              .setIn(['form', 'fields', 'listDataCancel'], action.payload.ListReturnCancel);
+            return nextState1;
+<span class="branch-2 cbranch-no" title="branch not covered" >        case RESPONSE_CANCEL_ORDER_LIST:</span>
+<span class="cstat-no" title="statement not covered" >          let nextState13 = state.setIn(['form', 'isBusy'], false)</span>
+          .setIn(['form', 'state'], action.type)
+          .setIn(['form', 'isError'], false)
+                                .setIn(['form', 'fields', 'ErrorCode'], action.payload);
+<span class="cstat-no" title="statement not covered" >              return</span> nextState13;
+        case REALTIME_ORDER_LIST:
+          let listData=[];
+          if (action.payload.typeForm===formType.Fill) {
+            listData=state.form.fields.listDataFill;
+          }else if (action.payload.typeForm===formType.Cancel) {
+            listData=state.form.fields.listDataCancel;
+          }else {
+            listData=state.form.fields.listData;
+          }
+<span class="missing-if-branch" title="if path not taken" >I</span>          if (listData==null) {
+<span class="cstat-no" title="statement not covered" >            l</span>istData=[];
+          }
+          var itemSelect=firstOrDefault(listData,function (data) {
+            return data.ID===action.payload.ID;
+          });
+          if (itemSelect!=null) {
+            let indexOf=listData.indexOf(itemSelect);
+            listData[indexOf]=action.payload;
+          }else {
+            listData.splice(0,0,action.payload);
+          }
+&nbsp;
+          let nextState2 = state;
+          if (action.payload.typeForm===formType.Fill) {
+&nbsp;
+            let listWorking=state.form.fields.listData;
+<span class="missing-if-branch" title="if path not taken" >I</span>            if (listWorking==null) {
+<span class="cstat-no" title="statement not covered" >              li</span>stWorking=[];
+            }
+            var itemSelect1=firstOrDefault(listWorking,functio<span class="fstat-no" title="function not covered" >n (data) {</span>
+<span class="cstat-no" title="statement not covered" >              return data.ID===actio</span>n.payload.ID;
+            });
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>            if (itemSelect1!=null) {
+<span class="cstat-no" title="statement not covered" >              let indexOf=listWorking.indexOf(i</span>temSelect1);
+<span class="cstat-no" title="statement not covered" >              listWorking.splice</span>(indexOf,1);
+            }
+&nbsp;
+            nextState2 = state.setIn(['form', 'fields', 'listData'], listWorking)
+                              .setIn(['form', 'fields', 'listDataFill'], listData);
+          } else if (action.payload.typeForm===formType.Cancel) {
+            let listWorking1=state.form.fields.listData;
+<span class="missing-if-branch" title="if path not taken" >I</span>            if (listWorking1==null) {
+<span class="cstat-no" title="statement not covered" >              lis</span>tWorking1=[];
+            }
+            var itemSelect1=firstOrDefault(listWorking1,functio<span class="fstat-no" title="function not covered" >n (data) {</span>
+<span class="cstat-no" title="statement not covered" >              return data.ID===actio</span>n.payload.ID;
+            });
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>            if (itemSelect1!=null) {
+<span class="cstat-no" title="statement not covered" >              let indexOf=listWorking1.indexOf(it</span>emSelect1);
+<span class="cstat-no" title="statement not covered" >              listWorking1.splice(</span>indexOf,1);
+            }
+&nbsp;
+            nextState2 = state.setIn(['form', 'fields', 'listData'], listWorking1)
+                              .setIn(['form', 'fields', 'listDataCancel'], listData);
+          }else {
+            nextState2 = state.setIn(['form', 'fields', 'listData'], listData);
+          }
+          nextState2 = nextState2.setIn(['form', 'fields', 'ErrorCode'], '')
+                                .setIn(['form', 'state'], action.type)
+                                .setIn(['form', 'isError'], false);
+          nextState2 = nextState2.setIn(['form', 'state'], PENDING_REALTIME_ORDER_LIST);
+          state=nextState2;
+          return nextState2;
+    }
+    return state;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 28 2016 13:19:47 GMT+0700 (ICT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

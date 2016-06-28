@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/lebui/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-31d3303aea85ac6d6d8ae9b22e19dd64fd74d388.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/snowflake/react-native-i18n/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c84306c304da2f1c85c4702cad5c5ed06f9cadd9">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-64a27c45e03159f62f42036ea4043fe06925f65d.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4af24c040b21980e0a80a505816c648e36705bd9">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-57f4695411ec5340d31c51c1e6c1be0953efdd25.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-662eb6f87c7b2efcbaa39c0919d5b5620cda9f30.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-71842d778905345e2fe220947f9587e5e147a083.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/okio-1.6.0-616ce77280f57172290e8a0367d78478e5a9012c.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.5.0/e9753b7dcae5deca92e871c5c759067070b07bc/okhttp-ws-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0e9753b7dcae5deca92e871c5c759067070b07bc">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-2.5.0-3e4fd401e081a66dc0ebad2a9f23c3484fde9093.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-383ccecfad654c0dea0782dee7da085b506a85e9.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0d5d69b03cb7d68b81543f6483ed04ccb0e2235b">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-099fe0cb94d3229245410f3ab1cb582c9f002053.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9178570a3a28c95fabd3bc746cd68efe99ad2b47">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-19026bd59aef688fde3bfbaa9ec1264d3c80ed5b.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/snowflake/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a6a4ad023e717ff2b7adb9a9adb2e77e2f7b84d6">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-4527c43a8ebb1722ebc08f35cd6eee2b1809da41.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="845a5b3a624946b2068963ba656c117fc453701c">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-27d1249ce05c8c6875d37ef5bae565bda4a43c29.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3836ecca4e31e18ea8fbae8e822d49777b0db4f7">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-ca53c51f47d7ed6fbdd25653d444aeb586dbdff3.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-cb8b85d7df04f29e15e3d994fc47a74e93d0468c.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.5.0/4de2b4ed3445c37ec1720a7d214712e845a24636/okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0-5b14aee0dd97b081caa11e4c3fc7eca39545142c.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.24.0-rc3/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="44eccb25248cd312ba73ae785d7c86021e86ebf2">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-233c91187a9caa397cc1d2d6c1b419d9b26570b0.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-ce2b5354ded7ce222328a266089d9afc49444652.jar" />
+    </item>
+    <item
+        jar="/usr/local/Cellar/android-sdk/24.4.1_1/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-51eb24e91ddbee4e2b0a209158e2ad356590715c.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-e4091438c9fd0320cd205a35918685d6d9fe6e6e.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-a7c83efbeefd69dff214f083a3f13f8c10ee268c.jar" />
+    </item>
+    <item
+        jar="/Users/lebui/equix/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.24.0-rc3/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="92a681b5d50fddd841c4dad7056f213a56b38757">
+        <dex dex="/Users/lebui/equix/android/app/build/intermediates/pre-dexed/debug/classes-641feed1506d1d31e76b0d4e7707d2de31a8e80c.jar" />
+    </item>
+
+</items>
